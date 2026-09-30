@@ -1,0 +1,214 @@
+<?xml version="1.0"?>
+<TcSmItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmProject" TcSmVersion="1.0" TcVersion="3.1.4026.27" ClassName="CTComObjDef">
+	<DataTypes>
+		<DataType>
+			<Name GUID="{ECA9740C-770E-535F-679D-15DC9C6F9057}">MonitoringSignalsType</Name>
+			<BitSize>128</BitSize>
+			<SubItem>
+				<Name>setpoint</Name>
+				<Type GUID="{18071995-0000-0000-0000-00000000000E}">LREAL</Type>
+				<BitSize>64</BitSize>
+				<BitOffs>0</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>actual</Name>
+				<Type GUID="{18071995-0000-0000-0000-00000000000E}">LREAL</Type>
+				<BitSize>64</BitSize>
+				<BitOffs>64</BitOffs>
+			</SubItem>
+		</DataType>
+	</DataTypes>
+	<ImageDatas>
+		<ImageData Id="1000">424d360300000000000036000000280000001000000010000000010018000000000000000000c40e0000c40e00000000000000000000ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ff000000ff00ffff00ffff00ff000000000000000000000000000000000000000000000000000000000000000000000000000000000000ff00ffff00ff000000ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ff000000ff00ffff00ffff00ff000000ff00ff000000ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ff000000ff00ffff00ff000000ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ff000000ff00ffff00ffff00ff000000000000000000000000000000000000ff00ffff00ffff00ffff00ffff00ffff00ff000000ff00ffff00ffff00ff000000c0c0c0c0c0c0c0c0c0c0c0c0000000000000ff00ffff00ffff00ffff00ffff00ff000000ff00ffff00ffff00ff000000c0c0c0c0c0c0c0c0c0c0c0c0000000c0c0c0000000ff00ffff00ffff00ffff00ff000000ff00ffff00ffff00ff000000c0c0c0c0c0c0c0c0c0c0c0c0000000c0c0c0c0c0c0000000ff00ffff00ffff00ff000000ff00ffff00ffff00ff030003c0c0c0c0c0c0c0c0c0c0c0c0000000c0c0c0c0c0c0000000ff00ffff00ffff00ff000000ff00ffff00ffff00ff000000000000000000000000000000000000c0c0c0c0c0c0000000ff00ffff00ffff00ff000000ff00ffff00ffff00ffff00ff000000c0c0c0c0c0c0c0c0c0c0c0c0000000c0c0c0000000ff00ffff00ffff00ff000000ff00ffff00ffff00ffff00ffff00ff000000c0c0c0c0c0c0c0c0c0c0c0c0000000000000ff00ffff00ff000000000000000000ff00ffff00ffff00ffff00ffff00ff000000000000000000000000000000000000ff00ffff00ffff00ff000000ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ff</ImageData>
+	</ImageDatas>
+	<Module Id="#x01010030" KeepUnrestoredLinks="2" ClassFactoryId="Beckhoff Automation GmbH|SimulationIO|1.2.37.0">
+		<Name>__FILENAME__</Name>
+		<ImageId>1000</ImageId>
+		<TmcDesc GUID="{2DC91CFE-572A-4479-BB91-A9B3CD41ABE6}" ClassFactoryId="Beckhoff Automation GmbH|SimulationIO|1.2.37.0">
+			<Name>SimIoGroup</Name>
+			<CLSID ClassFactory="SimulationIO">{2DC91CFE-572A-4479-BB91-A9B3CD41ABE6}</CLSID>
+			<Info>
+				<ImageData>424d360300000000000036000000280000001000000010000000010018000000000000000000c40e0000c40e00000000000000000000ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ff000000ff00ffff00ffff00ff000000000000000000000000000000000000000000000000000000000000000000000000000000000000ff00ffff00ff000000ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ff000000ff00ffff00ffff00ff000000ff00ff000000ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ff000000ff00ffff00ff000000ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ff000000ff00ffff00ffff00ff000000000000000000000000000000000000ff00ffff00ffff00ffff00ffff00ffff00ff000000ff00ffff00ffff00ff000000c0c0c0c0c0c0c0c0c0c0c0c0000000000000ff00ffff00ffff00ffff00ffff00ff000000ff00ffff00ffff00ff000000c0c0c0c0c0c0c0c0c0c0c0c0000000c0c0c0000000ff00ffff00ffff00ffff00ff000000ff00ffff00ffff00ff000000c0c0c0c0c0c0c0c0c0c0c0c0000000c0c0c0c0c0c0000000ff00ffff00ffff00ff000000ff00ffff00ffff00ff030003c0c0c0c0c0c0c0c0c0c0c0c0000000c0c0c0c0c0c0000000ff00ffff00ffff00ff000000ff00ffff00ffff00ff000000000000000000000000000000000000c0c0c0c0c0c0000000ff00ffff00ffff00ff000000ff00ffff00ffff00ffff00ff000000c0c0c0c0c0c0c0c0c0c0c0c0000000c0c0c0000000ff00ffff00ffff00ff000000ff00ffff00ffff00ffff00ffff00ff000000c0c0c0c0c0c0c0c0c0c0c0c0000000000000ff00ffff00ff000000000000000000ff00ffff00ffff00ffff00ffff00ff000000000000000000000000000000000000ff00ffff00ffff00ff000000ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ff</ImageData>
+			</Info>
+			<InitSequence>PSO</InitSequence>
+			<Contexts>
+				<Context>
+					<Id>1</Id>
+					<ManualConfig>
+						<OTCID>#x02010020</OTCID>
+					</ManualConfig>
+					<Priority>1</Priority>
+					<CycleTime>5000000</CycleTime>
+					<DependOn>ParentObject</DependOn>
+				</Context>
+			</Contexts>
+			<Interfaces>
+				<Interface DisableCodeGeneration="true">
+					<Type GUID="{00000012-0000-0000-E000-000000000064}">ITComObject</Type>
+				</Interface>
+				<Interface>
+					<Type GUID="{03000010-0000-0000-E000-000000000064}">ITcCyclic</Type>
+				</Interface>
+				<Interface DisableCodeGeneration="true">
+					<Type GUID="{03000012-0000-0000-E000-000000000064}">ITcADI</Type>
+				</Interface>
+				<Interface DisableCodeGeneration="true">
+					<Type GUID="{03000018-0000-0000-E000-000000000064}">ITcWatchSource</Type>
+				</Interface>
+			</Interfaces>
+			<Parameters>
+				<Parameter HideParameter="true" ReadOnly="true">
+					<Name>DataAreaCfg0</Name>
+					<BitSize>128</BitSize>
+					<BaseType GUID="{BD3BA8A6-FB59-4197-B6BA-A3B09FFC369C}" Namespace="IO">TcIoDataAreaCfg</BaseType>
+					<ArrayInfo>
+						<LBound>0</LBound>
+						<Elements Min="0" MaxUnbounded="true">1</Elements>
+					</ArrayInfo>
+					<PTCID>#x03007000</PTCID>
+					<ContextId>1</ContextId>
+				</Parameter>
+				<Parameter HideParameter="true" ReadOnly="true">
+					<Name>DataAreaCfg1</Name>
+					<BitSize>256</BitSize>
+					<BaseType GUID="{BD3BA8A6-FB59-4197-B6BA-A3B09FFC369C}" Namespace="IO">TcIoDataAreaCfg</BaseType>
+					<ArrayInfo>
+						<LBound>0</LBound>
+						<Elements Min="0" MaxUnbounded="true">2</Elements>
+					</ArrayInfo>
+					<PTCID>#x03007001</PTCID>
+					<ContextId>1</ContextId>
+				</Parameter>
+				<Parameter HideParameter="true" ReadOnly="true">
+					<Name>DataAreaSizes</Name>
+					<BitSize>128</BitSize>
+					<BaseType GUID="{C636B456-B483-42A5-BD8A-58753433F375}" Namespace="IO">TcIoDataAreaSize</BaseType>
+					<ArrayInfo>
+						<LBound>0</LBound>
+						<Elements Min="0" MaxUnbounded="true">2</Elements>
+					</ArrayInfo>
+					<PTCID>#x0300002a</PTCID>
+					<ContextId>1</ContextId>
+				</Parameter>
+			</Parameters>
+			<DataAreas>
+				<DataArea DisableCodeGeneration="true">
+					<AreaNo AreaType="InputSrc" CreateSymbols="true" DynamicArea="true">0</AreaNo>
+					<Name>Inputs</Name>
+					<ContextId>1</ContextId>
+					<ByteSize>3</ByteSize>
+					<Symbol>
+						<Name>Temp</Name>
+						<BitSize>16</BitSize>
+						<BaseType GUID="{18071995-0000-0000-0000-000000000006}">INT</BaseType>
+						<BitOffs>8</BitOffs>
+					</Symbol>
+				</DataArea>
+				<DataArea DisableCodeGeneration="true">
+					<AreaNo AreaType="OutputDst" CreateSymbols="true" DynamicArea="true">1</AreaNo>
+					<Name>Outputs</Name>
+					<ContextId>1</ContextId>
+					<ByteSize>19</ByteSize>
+					<Symbol>
+						<Name>Heat_On</Name>
+						<BitSize>8</BitSize>
+						<BaseType GUID="{18071995-0000-0000-0000-000000000030}">BOOL</BaseType>
+						<BitOffs>16</BitOffs>
+					</Symbol>
+					<Symbol>
+						<Name>MonitoringSignals</Name>
+						<BitSize>128</BitSize>
+						<BaseType GUID="{ECA9740C-770E-535F-679D-15DC9C6F9057}">MonitoringSignalsType</BaseType>
+						<BitOffs>24</BitOffs>
+					</Symbol>
+				</DataArea>
+			</DataAreas>
+			<InterfacePointers>
+				<InterfacePointer>
+					<PTCID>#x03002060</PTCID>
+					<Name>CyclicCaller</Name>
+					<Type GUID="{0300001E-0000-0000-E000-000000000064}">ITcCyclicCaller</Type>
+				</InterfacePointer>
+			</InterfacePointers>
+			<Properties>
+				<Property>
+					<Name>Category</Name>
+					<Value>SimIo</Value>
+				</Property>
+			</Properties>
+			<ParentOTCID>#x01010020</ParentOTCID>
+			<ParameterValues>
+				<Value>
+					<Name>DataAreaCfg0[0].pid</Name>
+					<Value>0</Value>
+				</Value>
+				<Value>
+					<Name>DataAreaCfg0[0].bitSize</Name>
+					<Value>16</Value>
+				</Value>
+				<Value>
+					<Name>DataAreaCfg0[0].bitOffs</Name>
+					<Value>8</Value>
+				</Value>
+				<Value>
+					<Name>DataAreaCfg0[0].mappingState</Name>
+					<EnumText>MS_Mapped</EnumText>
+				</Value>
+				<Value>
+					<Name>DataAreaCfg1[0].pid</Name>
+					<Value>0</Value>
+				</Value>
+				<Value>
+					<Name>DataAreaCfg1[0].bitSize</Name>
+					<Value>8</Value>
+				</Value>
+				<Value>
+					<Name>DataAreaCfg1[0].bitOffs</Name>
+					<Value>16</Value>
+				</Value>
+				<Value>
+					<Name>DataAreaCfg1[0].mappingState</Name>
+					<EnumText>MS_Mapped</EnumText>
+				</Value>
+				<Value>
+					<Name>DataAreaCfg1[1].pid</Name>
+					<Value>0</Value>
+				</Value>
+				<Value>
+					<Name>DataAreaCfg1[1].bitSize</Name>
+					<Value>128</Value>
+				</Value>
+				<Value>
+					<Name>DataAreaCfg1[1].bitOffs</Name>
+					<Value>24</Value>
+				</Value>
+				<Value>
+					<Name>DataAreaCfg1[1].mappingState</Name>
+					<EnumText>MS_Mapped</EnumText>
+				</Value>
+				<Value>
+					<Name>DataAreaSizes[0].area</Name>
+					<Value>0</Value>
+				</Value>
+				<Value>
+					<Name>DataAreaSizes[0].size</Name>
+					<Value>3</Value>
+				</Value>
+				<Value>
+					<Name>DataAreaSizes[1].area</Name>
+					<Value>1</Value>
+				</Value>
+				<Value>
+					<Name>DataAreaSizes[1].size</Name>
+					<Value>19</Value>
+				</Value>
+			</ParameterValues>
+			<InterfacePointerValues>
+				<Value>
+					<Name>CyclicCaller</Name>
+					<OTCID>#x02010020</OTCID>
+				</Value>
+			</InterfacePointerValues>
+		</TmcDesc>
+	</Module>
+</TcSmItem>

@@ -1,0 +1,291 @@
+<?xml version="1.0"?>
+<TcSmItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmProject" TcSmVersion="1.0" TcVersion="3.1.4026.27" ClassName="CTComObjDef">
+	<DataTypes>
+		<DataType>
+			<Name GUID="{6D4FD3BA-AB2F-4710-8EA7-4053669988E2}">ITcSimIoCfgProvider</Name>
+			<BitSize X64="64">32</BitSize>
+			<BaseType GUID="{00000001-0000-0000-E000-000000000064}">ITcUnknown</BaseType>
+			<Method>
+				<Name>GetGuid</Name>
+				<ReturnType GUID="{18071995-0000-0000-0000-000000000019}">HRESULT</ReturnType>
+				<ReturnBitSize>32</ReturnBitSize>
+				<Parameter>
+					<Name>guid</Name>
+					<Type GUID="{18071995-0000-0000-0000-000000000021}" PointerTo="1">GUID</Type>
+					<BitSize X64="64">32</BitSize>
+				</Parameter>
+			</Method>
+			<Method>
+				<Name>GetTmcSize</Name>
+				<ReturnType GUID="{18071995-0000-0000-0000-000000000019}">HRESULT</ReturnType>
+				<ReturnBitSize>32</ReturnBitSize>
+				<Parameter>
+					<Name>tmcBufferSize</Name>
+					<Type GUID="{18071995-0000-0000-0000-000000000008}" PointerTo="1">UDINT</Type>
+					<BitSize X64="64">32</BitSize>
+				</Parameter>
+			</Method>
+			<Method>
+				<Name>GetTmcContent</Name>
+				<ReturnType GUID="{18071995-0000-0000-0000-000000000019}">HRESULT</ReturnType>
+				<ReturnBitSize>32</ReturnBitSize>
+				<Parameter>
+					<Name>pData</Name>
+					<Type GUID="{18071995-0000-0000-0000-000000000018}">PVOID</Type>
+					<BitSize X64="64">32</BitSize>
+				</Parameter>
+				<Parameter>
+					<Name>nData</Name>
+					<Type GUID="{18071995-0000-0000-0000-000000000008}">UDINT</Type>
+					<BitSize>32</BitSize>
+				</Parameter>
+			</Method>
+			<Hides>
+				<Hide GUID="{DE4B9EB6-1FDB-4B7E-8B9F-C43476CEBDFB}"/>
+			</Hides>
+		</DataType>
+		<DataType>
+			<Name GUID="{3D91661B-6ECB-4F59-B5AD-42C1883E79F1}">ITcSimIoCfgGateway</Name>
+			<BitSize X64="64">32</BitSize>
+			<BaseType GUID="{00000001-0000-0000-E000-000000000064}">ITcUnknown</BaseType>
+			<Method>
+				<Name>RegisterProvider</Name>
+				<ReturnType GUID="{18071995-0000-0000-0000-000000000019}">HRESULT</ReturnType>
+				<ReturnBitSize>32</ReturnBitSize>
+				<Parameter>
+					<Name>ipProvider</Name>
+					<Type GUID="{6D4FD3BA-AB2F-4710-8EA7-4053669988E2}">ITcSimIoCfgProvider</Type>
+					<BitSize X64="64">32</BitSize>
+				</Parameter>
+			</Method>
+		</DataType>
+	</DataTypes>
+	<ImageDatas>
+		<ImageData Id="1000">424d360300000000000036000000280000001000000010000000010018000000000000000000c40e0000c40e00000000000000000000ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ff000000ff00ffff00ffff00ff000000000000000000000000000000000000000000000000000000000000000000000000000000000000ff00ffff00ff000000ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ff000000ff00ffff00ffff00ff000000ff00ff000000ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ff000000ff00ffff00ff000000ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ff000000ff00ffff00ffff00ff000000000000000000000000000000000000ff00ffff00ffff00ffff00ffff00ffff00ff000000ff00ffff00ffff00ff000000c0c0c0c0c0c0c0c0c0c0c0c0000000000000ff00ffff00ffff00ffff00ffff00ff000000ff00ffff00ffff00ff000000c0c0c0c0c0c0c0c0c0c0c0c0000000c0c0c0000000ff00ffff00ffff00ffff00ff000000ff00ffff00ffff00ff000000c0c0c0c0c0c0c0c0c0c0c0c0000000c0c0c0c0c0c0000000ff00ffff00ffff00ff000000ff00ffff00ffff00ff030003c0c0c0c0c0c0c0c0c0c0c0c0000000c0c0c0c0c0c0000000ff00ffff00ffff00ff000000ff00ffff00ffff00ff000000000000000000000000000000000000c0c0c0c0c0c0000000ff00ffff00ffff00ff000000ff00ffff00ffff00ffff00ff000000c0c0c0c0c0c0c0c0c0c0c0c0000000c0c0c0000000ff00ffff00ffff00ff000000ff00ffff00ffff00ffff00ffff00ff000000c0c0c0c0c0c0c0c0c0c0c0c0000000000000ff00ffff00ff000000000000000000ff00ffff00ffff00ffff00ffff00ff000000000000000000000000000000000000ff00ffff00ffff00ff000000ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ff</ImageData>
+	</ImageDatas>
+	<Module Id="#x01010020" KeepUnrestoredLinks="2" ClassFactoryId="Beckhoff Automation GmbH|SimulationIO|1.2.37.0">
+		<Name>__FILENAME__</Name>
+		<ImageId>1000</ImageId>
+		<Xml>
+			<TcSimRuntimeFmi_Configuration fmiVersion="1" variableNamingConvention="0" fmuExportDir="../../simulink" fmuFileName="TcSimRuntimeTempCtrl" arrayVariables="false" simulationPacing="true" waitForActivation="true" waitForActivationTime="0" autoStartRuntime="false" includeBootProject="false" additionalResources="false" additionalResourcesDir="C:/ProgramData/Beckhoff/TwinCAT/Functions/TE1421-Simulation-Runtime-for-FMI/AdditionalResources">
+				<ioHierarchy>
+					<item>
+						<tname>TIRC^TcCOM Objects^SimIo</tname>
+						<checkState>1</checkState>
+						<isExpanded>true</isExpanded>
+					</item>
+					<childitems>
+						<item>
+							<tname>TIRC^TcCOM Objects^SimIo^Inputs</tname>
+							<checkState>0</checkState>
+							<isExpanded>false</isExpanded>
+						</item>
+					</childitems>
+					<childitems>
+						<item>
+							<tname>TIRC^TcCOM Objects^SimIo^Outputs</tname>
+							<checkState>0</checkState>
+							<isExpanded>false</isExpanded>
+						</item>
+					</childitems>
+					<childitems>
+						<item>
+							<tname>TIRC^TcCOM Objects^SimIo^TempCtrlSysPT2</tname>
+							<checkState>1</checkState>
+							<isExpanded>true</isExpanded>
+						</item>
+						<childitems>
+							<item>
+								<tname>TIRC^TcCOM Objects^SimIo^TempCtrlSysPT2^Inputs</tname>
+								<checkState>1</checkState>
+								<isExpanded>true</isExpanded>
+							</item>
+							<childitems>
+								<item>
+									<tname>TIRC^TcCOM Objects^SimIo^TempCtrlSysPT2^Inputs^Temp</tname>
+									<checkState>1</checkState>
+									<isExpanded>false</isExpanded>
+								</item>
+							</childitems>
+						</childitems>
+						<childitems>
+							<item>
+								<tname>TIRC^TcCOM Objects^SimIo^TempCtrlSysPT2^Outputs</tname>
+								<checkState>1</checkState>
+								<isExpanded>true</isExpanded>
+							</item>
+							<childitems>
+								<item>
+									<tname>TIRC^TcCOM Objects^SimIo^TempCtrlSysPT2^Outputs^Heat_On</tname>
+									<checkState>1</checkState>
+									<isExpanded>false</isExpanded>
+								</item>
+							</childitems>
+							<childitems>
+								<item>
+									<tname>TIRC^TcCOM Objects^SimIo^TempCtrlSysPT2^Outputs^MonitoringSignals</tname>
+									<checkState>1</checkState>
+									<isExpanded>true</isExpanded>
+								</item>
+								<childitems>
+									<item>
+										<tname>TIRC^TcCOM Objects^SimIo^TempCtrlSysPT2^Outputs^MonitoringSignals^setpoint</tname>
+										<checkState>1</checkState>
+										<isExpanded>false</isExpanded>
+									</item>
+								</childitems>
+								<childitems>
+									<item>
+										<tname>TIRC^TcCOM Objects^SimIo^TempCtrlSysPT2^Outputs^MonitoringSignals^current</tname>
+										<checkState>1</checkState>
+										<isExpanded>false</isExpanded>
+									</item>
+								</childitems>
+							</childitems>
+						</childitems>
+					</childitems>
+				</ioHierarchy>
+			</TcSimRuntimeFmi_Configuration>
+			<TcSimRuntimeFmi_Hash>0x201c34a1bfa58d66</TcSimRuntimeFmi_Hash>
+		</Xml>
+		<TmcDesc GUID="{020BA85F-9E45-41BC-86A4-7470B07659B3}" ClassFactoryId="Beckhoff Automation GmbH|SimulationIO|1.2.37.0">
+			<Name>SimIoMaster</Name>
+			<CLSID ClassFactory="SimulationIO">{020BA85F-9E45-41BC-86A4-7470B07659B3}</CLSID>
+			<Info>
+				<ImageData>424d360300000000000036000000280000001000000010000000010018000000000000000000c40e0000c40e00000000000000000000ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ff000000ff00ffff00ffff00ff000000000000000000000000000000000000000000000000000000000000000000000000000000000000ff00ffff00ff000000ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ff000000ff00ffff00ffff00ff000000ff00ff000000ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ff000000ff00ffff00ff000000ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ff000000ff00ffff00ffff00ff000000000000000000000000000000000000ff00ffff00ffff00ffff00ffff00ffff00ff000000ff00ffff00ffff00ff000000c0c0c0c0c0c0c0c0c0c0c0c0000000000000ff00ffff00ffff00ffff00ffff00ff000000ff00ffff00ffff00ff000000c0c0c0c0c0c0c0c0c0c0c0c0000000c0c0c0000000ff00ffff00ffff00ffff00ff000000ff00ffff00ffff00ff000000c0c0c0c0c0c0c0c0c0c0c0c0000000c0c0c0c0c0c0000000ff00ffff00ffff00ff000000ff00ffff00ffff00ff030003c0c0c0c0c0c0c0c0c0c0c0c0000000c0c0c0c0c0c0000000ff00ffff00ffff00ff000000ff00ffff00ffff00ff000000000000000000000000000000000000c0c0c0c0c0c0000000ff00ffff00ffff00ff000000ff00ffff00ffff00ffff00ff000000c0c0c0c0c0c0c0c0c0c0c0c0000000c0c0c0000000ff00ffff00ffff00ff000000ff00ffff00ffff00ffff00ffff00ff000000c0c0c0c0c0c0c0c0c0c0c0c0000000000000ff00ffff00ff000000000000000000ff00ffff00ffff00ffff00ffff00ff000000000000000000000000000000000000ff00ffff00ffff00ff000000ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ff</ImageData>
+				<TabExtension GUID="{3611E1F7-F687-42B4-9677-03B69B4F49E0}"/>
+			</Info>
+			<InitSequence>PSO</InitSequence>
+			<Contexts>
+				<Context>
+					<Id>1</Id>
+					<ManualConfig>
+						<OTCID>#x02010020</OTCID>
+					</ManualConfig>
+					<Priority>1</Priority>
+					<CycleTime>5000000</CycleTime>
+					<SortOrder>100</SortOrder>
+				</Context>
+			</Contexts>
+			<Interfaces>
+				<Interface DisableCodeGeneration="true">
+					<Type GUID="{00000012-0000-0000-E000-000000000064}">ITComObject</Type>
+				</Interface>
+				<Interface>
+					<Type GUID="{03000010-0000-0000-E000-000000000064}">ITcCyclic</Type>
+				</Interface>
+				<Interface DisableCodeGeneration="true">
+					<Type GUID="{03000012-0000-0000-E000-000000000064}">ITcADI</Type>
+				</Interface>
+				<Interface DisableCodeGeneration="true">
+					<Type GUID="{03000018-0000-0000-E000-000000000064}">ITcWatchSource</Type>
+				</Interface>
+				<Interface>
+					<Type GUID="{00000038-0000-0000-E000-000000000064}">ITComObjectCategory</Type>
+				</Interface>
+				<Interface>
+					<Type GUID="{3D91661B-6ECB-4F59-B5AD-42C1883E79F1}">ITcSimIoCfgGateway</Type>
+				</Interface>
+			</Interfaces>
+			<Parameters>
+				<Parameter HideParameter="true">
+					<Name>TraceLevelMax</Name>
+					<Comment><![CDATA[Controls the amount of log messages.]]></Comment>
+					<BitSize>32</BitSize>
+					<BaseType GUID="{8007AE3B-86BB-40F2-B385-EF87FCC239A4}">TcTraceLevel</BaseType>
+					<PTCID>#x03002103</PTCID>
+					<ContextId>1</ContextId>
+				</Parameter>
+				<Parameter HideParameter="true" ReadOnly="true">
+					<Name>DataAreaCfg0</Name>
+					<BitSize>0</BitSize>
+					<BaseType GUID="{BD3BA8A6-FB59-4197-B6BA-A3B09FFC369C}" Namespace="IO">TcIoDataAreaCfg</BaseType>
+					<ArrayInfo>
+						<LBound>0</LBound>
+						<Elements Min="0" MaxUnbounded="true">0</Elements>
+					</ArrayInfo>
+					<PTCID>#x03007000</PTCID>
+					<ContextId>1</ContextId>
+				</Parameter>
+				<Parameter HideParameter="true" ReadOnly="true">
+					<Name>DataAreaCfg1</Name>
+					<BitSize>0</BitSize>
+					<BaseType GUID="{BD3BA8A6-FB59-4197-B6BA-A3B09FFC369C}" Namespace="IO">TcIoDataAreaCfg</BaseType>
+					<ArrayInfo>
+						<LBound>0</LBound>
+						<Elements Min="0" MaxUnbounded="true">0</Elements>
+					</ArrayInfo>
+					<PTCID>#x03007001</PTCID>
+					<ContextId>1</ContextId>
+				</Parameter>
+				<Parameter HideParameter="true" ReadOnly="true">
+					<Name>DataAreaSizes</Name>
+					<BitSize>128</BitSize>
+					<BaseType GUID="{C636B456-B483-42A5-BD8A-58753433F375}" Namespace="IO">TcIoDataAreaSize</BaseType>
+					<ArrayInfo>
+						<LBound>0</LBound>
+						<Elements Min="0" Max="64">2</Elements>
+					</ArrayInfo>
+					<PTCID>#x0300002a</PTCID>
+					<ContextId>1</ContextId>
+				</Parameter>
+			</Parameters>
+			<DataAreas>
+				<DataArea DisableCodeGeneration="true">
+					<AreaNo AreaType="InputSrc" CreateSymbols="true" DynamicArea="true">0</AreaNo>
+					<Name>Inputs</Name>
+					<ContextId>1</ContextId>
+					<ByteSize>0</ByteSize>
+				</DataArea>
+				<DataArea DisableCodeGeneration="true">
+					<AreaNo AreaType="OutputDst" CreateSymbols="true" DynamicArea="true">1</AreaNo>
+					<Name>Outputs</Name>
+					<ContextId>1</ContextId>
+					<ByteSize>0</ByteSize>
+				</DataArea>
+			</DataAreas>
+			<InterfacePointers>
+				<InterfacePointer>
+					<PTCID>#x03002060</PTCID>
+					<Name>CyclicCaller</Name>
+					<Type GUID="{0300001E-0000-0000-E000-000000000064}">ITcCyclicCaller</Type>
+				</InterfacePointer>
+			</InterfacePointers>
+			<Properties>
+				<Property>
+					<Name>Category</Name>
+					<Value>SimIo</Value>
+				</Property>
+			</Properties>
+			<ParameterValues>
+				<Value>
+					<Name>TraceLevelMax</Name>
+					<EnumText>tlAlways</EnumText>
+				</Value>
+				<Value>
+					<Name>DataAreaSizes[0].area</Name>
+					<Value>0</Value>
+				</Value>
+				<Value>
+					<Name>DataAreaSizes[0].size</Name>
+					<Value>0</Value>
+				</Value>
+				<Value>
+					<Name>DataAreaSizes[1].area</Name>
+					<Value>1</Value>
+				</Value>
+				<Value>
+					<Name>DataAreaSizes[1].size</Name>
+					<Value>0</Value>
+				</Value>
+			</ParameterValues>
+			<InterfacePointerValues>
+				<Value>
+					<Name>CyclicCaller</Name>
+					<OTCID>#x02010020</OTCID>
+				</Value>
+			</InterfacePointerValues>
+		</TmcDesc>
+		<Module File="TempCtrlSysPT2.xti"/>
+	</Module>
+</TcSmItem>

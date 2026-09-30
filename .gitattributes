@@ -1,0 +1,10 @@
+* text=auto
+
+# TwinCAT and Simulink project files are written with CRLF
+*.tsproj text eol=crlf
+*.xti    text eol=crlf
+*.sln    text eol=crlf
+*.mdl    text
+
+*.fmu binary
+*.exe binary

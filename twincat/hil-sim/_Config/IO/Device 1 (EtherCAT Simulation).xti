@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<TcSmItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmProject" TcSmVersion="1.0" TcVersion="3.1.4026.27" ClassName="CDevEtherCATSimulationDef" SubType="144">
+	<DataTypes>
+		<DataType>
+			<Name GUID="{18071995-0000-0000-0000-000000000041}" TcBaseType="true" HideSubItems="true" CName="AmsNetId">AMSNETID</Name>
+			<BitSize>48</BitSize>
+			<BaseType GUID="{18071995-0000-0000-0000-000000000001}">BYTE</BaseType>
+			<ArrayInfo>
+				<LBound>0</LBound>
+				<Elements>6</Elements>
+			</ArrayInfo>
+			<Format>
+				<Printf>%d.%d.%d.%d.%d.%d</Printf>
+				<Parameter>[0]</Parameter>
+				<Parameter>[1]</Parameter>
+				<Parameter>[2]</Parameter>
+				<Parameter>[3]</Parameter>
+				<Parameter>[4]</Parameter>
+				<Parameter>[5]</Parameter>
+			</Format>
+		</DataType>
+	</DataTypes>
+	<Device Id="1" DevType="144" AmsPort="28673" AmsNetId="192.168.1.27.2.1" RemoteName="Device 1 (EtherCAT Simulation)">
+		<Name>__FILENAME__</Name>
+		<DevData>000000000000000000000000000000005c4445564943455c7b42443937444133442d373135352d344634312d413335322d3539383630333533343035467d0000000000000000000068d4fea90000ffff000105a9be26010000000000000000000000000000030000000000000000000000000000000000000000000000000000</DevData>
+		<Vars VarGrpType="1">
+			<Name>Inputs</Name>
+			<Var>
+				<Name>Status</Name>
+				<Type>UDINT</Type>
+			</Var>
+			<Var>
+				<Name>Telegram Counter</Name>
+				<Type>UDINT</Type>
+				<BitOffs>32</BitOffs>
+			</Var>
+			<Var>
+				<Name>Dc Time</Name>
+				<Type>ULINT</Type>
+				<BitOffs>64</BitOffs>
+			</Var>
+			<Var>
+				<Name>Dc Time to System Time Offset</Name>
+				<Type>ULINT</Type>
+				<BitOffs>128</BitOffs>
+			</Var>
+			<Var>
+				<Name>DevState</Name>
+				<Comment><![CDATA[0x0001 = Link error
+0x0100 = At least one device in 'INIT' state
+0x0200 = At least one device in 'PRE-OP' state
+0x0400 = At least one device in 'SAFE-OP' state
+0x0800 = At least one device indicates an error state
+]]></Comment>
+				<Type>UINT</Type>
+				<BitOffs>256</BitOffs>
+			</Var>
+			<Var>
+				<Name>AmsNetId</Name>
+				<Comment><![CDATA[AmsNetId of Simulation device]]></Comment>
+				<Type GUID="{18071995-0000-0000-0000-000000000041}">AMSNETID</Type>
+				<BitOffs>1536</BitOffs>
+			</Var>
+		</Vars>
+		<Vars VarGrpType="2">
+			<Name>Outputs</Name>
+			<Var>
+				<Name>Control</Name>
+				<Type>UDINT</Type>
+			</Var>
+		</Vars>
+		<Image Id="1" AddrType="1" ImageType="3" SizeIn="65536" SizeOut="65536">
+			<Name>Image</Name>
+		</Image>
+		<Box File="Term 1 (EK1100).xti" Id="1"/>
+		<Box File="Term 2 (EL3312).xti" Id="2"/>
+		<Box File="Term 3 (EL2002).xti" Id="3"/>
+		<EcatSimu>
+			<GeneralSettings DeviceDesc="X112 (TwinCAT-Intel PCI Ethernet Adapter (Gigabit) V2 #7)" SecondAdapter="00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"/>
+			<DevSettings MaxCycleTime="5000" InOffset="264" OutOffset="257" StateOffset="129" Flags="1"/>
+			<LogInAddrMaps LogAddr="16779264" PhysAddr="256" Size="8" WC="1"/>
+			<LogOutAddrMaps LogAddr="16777216" PhysAddr="256" Size="1" WC="1"/>
+			<LogStateAddrMaps LogAddr="150994944" PhysAddr="128" Size="1" WC="1"/>
+		</EcatSimu>
+	</Device>
+	<Mappings>
+		<OwnerA>
+			<OwnerB Name="TIRC^TcCOM Objects^TempCtrlSysPT2">
+				<Link VarA="Term 2 (EL3312)^TC Inputs Channel 1^FeedbackTemp" VarB="TempCtrlSysPT2_Y^Temp"/>
+				<Link VarA="Term 3 (EL2002)^Channel 1^HeaterOn" VarB="TempCtrlSysPT2_U^Heat_On" Size="1"/>
+			</OwnerB>
+		</OwnerA>
+	</Mappings>
+</TcSmItem>
